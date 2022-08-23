@@ -1303,18 +1303,21 @@ static void SetSafetyNetProps() {
     InitPropertySet("ro.warranty_bit", "0");
     InitPropertySet("ro.debuggable", "0");
     InitPropertySet("ro.secure", "1");
+    InitPropertySet("ro.bootimage.build.type", "user");
     InitPropertySet("ro.build.type", "user");
     InitPropertySet("ro.build.keys", "release-keys");
     InitPropertySet("ro.build.tags", "release-keys");
     InitPropertySet("ro.system.build.tags", "release-keys");
+    InitPropertySet("ro.product.build.type", "user");
+    InitPropertySet("ro.odm.build.type", "user");
+    InitPropertySet("ro.system.build.type", "user");
+    InitPropertySet("ro.system_ext.build.type", "user");
+    InitPropertySet("ro.vendor.build.type", "user");
+    InitPropertySet("ro.vendor_dlkm.build.type", "user");
     InitPropertySet("ro.vendor.boot.warranty_bit", "0");
     InitPropertySet("ro.vendor.warranty_bit", "0");
+    InitPropertySet("oplusboot.verifiedbootstate", "green");
 
-#ifndef ENG_BUILD
-    // Spoof non-eng builds (such as userdebug) to user
-    InitPropertySet("ro.build.type", "user");
-    InitPropertySet("ro.debuggable", "0");
-#endif
 }
 
 void PropertyInit() {
