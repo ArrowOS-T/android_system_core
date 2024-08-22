@@ -1320,6 +1320,7 @@ static void SetSafetyNetProps() {
     InitPropertySet("ro.vendor.warranty_bit", "0");
     InitPropertySet("oplusboot.verifiedbootstate", "green");
     InitPropertySet("sys.oem_unlock_allowed", "0");
+    InitPropertySet("ro.crypto.state", "encrypted");
 }
 
 void PropertyInit() {
